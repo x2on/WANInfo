@@ -1,0 +1,9 @@
+.env
+.secret
+.DS_Store
+/__pycache__
+/bin
+/certs
+docker-compose.yml
+/lib
+pyvenv.cfg
