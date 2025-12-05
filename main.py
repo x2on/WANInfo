@@ -16,6 +16,10 @@ EXTERNAL_API_BASE_URL = os.getenv("EXTERNAL_API_BASE_URL")
 EXTERNAL_API_KEY = os.getenv("EXTERNAL_API_KEY")
 CA_CERT_PATH = os.getenv("CA_CERT_PATH", "certs/ca.pem") 
 
+@app.get("/")
+def read_root():
+    return {"version": "1.0.0"}
+
 @app.get("/status")
 async def get_status():
     if not EXTERNAL_API_BASE_URL or not EXTERNAL_API_KEY:
